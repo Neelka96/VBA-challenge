@@ -1,2 +1,2 @@
 # VBA-challenge
-DataClass/2nd Module Challenge/
+DataClass_Module2_Challenge
