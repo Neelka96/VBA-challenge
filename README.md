@@ -1,10 +1,12 @@
-#README.md STILL IN PROGRESS
-
-# VBA-challenge
+# <ins>**VBA-challenge** </ins>
 # UTA-VIRT-DATA-PT-11-2024-U-LOLC
 
-## Listed Sources
+# <ins> README.md STILL IN PROGRESS </ins>
 
+## Listed Sources
+https://lib.pstcc.edu/csplagiarism/citation
+https://integrity.mit.edu/handbook/writing-code
+https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 ## MODULE PURPOSE:
       Module takes the input of an Excel workbook with (potentially) multiple worksheets within it and creates two
       new data tables in each one complete with new formatting and headers. Workbook should only update after
