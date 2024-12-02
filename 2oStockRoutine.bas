@@ -46,10 +46,10 @@ Attribute VB_Name = "Module1"
 '-----------------------------------------------------------------------------------------
 Sub vbaSummarizeStocks():
     '(-----------------------------------------)
-    '(                CHECKING FOR SPEED HERE                 )
+    '(        CHECKING FOR SPEED HERE          )
     '(-----------------------------------------)
-    Dim startTime, endTime, elapsedTime As Single   ')
-    startTime = Timer                                                ')
+    Dim startTime, endTime, elapsedTime As Single 
+    startTime = Timer                         
     '(-----------------------------------------)
     '######################################################################
     '# Title: ChatGPT's suggested use of Application.<Property> temporarily turns off Excel
@@ -230,7 +230,7 @@ Sub vbaSummarizeStocks():
     Application.EnableEvents = True
     
     '(--------------------------)
-    '(  CHECKING FOR SPEED HERE   )
+    '( CHECKING FOR SPEED HERE  )
     '(--------------------------)
     endTime = Timer
     elapsedTime = endTime - startTime
