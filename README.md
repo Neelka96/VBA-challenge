@@ -142,10 +142,10 @@ End With
 ```
 
 ## README Help Citations
-1. Written by Gries, D., L. Lee, S. Marschner, and W. White (over the years), published in 2014, the page "Academic Integrity, CS 1110..." was published online with information on how to list citations within source code.
-2. Published by GitHub for assistance using their markdown language in a README.md file! Includes information on hard/soft links, anchors, code embedding, picture sourcing and more!
-[^1]: Gries, D., et al. "Academic Integrity, CS 1110: Introduction to Computing Using Python: Fall 2014." Pellissippi Community College State Libraries, Sept. 2014, lib.pstcc.edu/csplagiarism/citation. Accessed 29 Nov. 2024.
-[^2]: GitHub, "Basic writing and formatting syntax" GitHub Docs, 2024, https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax. Accessed 29 Nov. 2024
+1. Written by Gries, D., L. Lee, S. Marschner, and W. White (over the years), published in 2014, the page "Academic Integrity, CS 1110..." was published online with information on how to list citations within source code. [^4]
+2. Published by GitHub for assistance using their markdown language in a README.md file! Includes information on hard/soft links, anchors, code embedding, picture sourcing and more! [^5]
+[^4]: Gries, D., et al. "Academic Integrity, CS 1110: Introduction to Computing Using Python: Fall 2014." Pellissippi Community College State Libraries, Sept. 2014, lib.pstcc.edu/csplagiarism/citation. Accessed 29 Nov. 2024.
+[^5]: GitHub, "Basic writing and formatting syntax" GitHub Docs, 2024, https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax. Accessed 29 Nov. 2024
 
 ## List of Subroutine SoftLinks
 [Link to Subroutine 2o](/2oStockRoutine.bas)
