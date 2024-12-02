@@ -1,22 +1,30 @@
-> [!Warning]
-> README.md STILL IN PROGRESS
-
 # README: VBA-challenge
-> Module Path: VBA-challenge/2oStockRoutine.bas
-> GitHub Path: VBA-challenge/README.md
+> Current Version: 2oStockRoutine.bas
 > 
-> **Last Updated: December 1st, 2024**
+> Module Path: [VBA-challenge/2oStockRoutine.bas](/2oStockRoutine.bas)
+> 
+> **Last Updated: December 2nd, 2024**
+
+> [!IMPORTANT]
+> For the original Module written from only the information given in class using ws.Range() as an access point please see the [1oStockRoutine!](/1oStockRoutine.bas)
+>
+> New and improved version is [2oStockRoutine](/2oStockRoutine.bas) as stated before!
 
 # Important Information
+**Made for EdX & UT Data Analytics and Visualization Bootcamp: Cohort UTA-VIRT-DATA-PT-11-2024-U-LOLC.** 
+
 Script is a macro written in VBA (Visual Basic for Applications) for use solely with Microsoft Excel files types and has only been tested with .xlsm and .xlsx file formats.
 
-**Made for EdX & UT Data Analytics and Visualization Bootcamp: Cohort UTA-VIRT-DATA-PT-11-2024-U-LOLC.** This is only the second module completed in the course!
+This is the second module completed in the course!
 
-README.md was written using tips and tricks from [GitHub Docs](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+This README.md was written using tips and tricks from [GitHub Docs](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
 
-For citation information please see [VBA-challenge Citations](#vba-challenge-citations)!
+For all citations please see [VBA-challenge Citations](#vba-challenge-citations).
 
-## CURRENT METHOD PATH:
+## Module Purpose
+Module's purpose is to analyze a large amount of data held on multiple pages of a workbook. The data consists of daily stock values and the objective is to provide a summary for each one on each sheet, along with a smaller summary for each worksheet. After an examination of the data, the module creates new tables of data with corresponding formatting and headers that will be filled in with computations that have been run on each grouping of stock tickers to create the summaries. The workbook and any worksheets within it should only update after the module finishes its execution along with message boxes declaring the macro a success and lisitng the execution time.
+
+## CURRENT METHOD:
 ```
 <Run Macro>
 --> Disable application update features
@@ -27,11 +35,9 @@ For citation information please see [VBA-challenge Citations](#vba-challenge-cit
 --> Two new arrays with headings and formatting printed back to workshees
 --> Loop to next worksheet
 --> Success! Re-enable application update features to see changes
+--> Print message box stating success and execution time
 <End Macro>
 ```
-
-## Module Purpose
-Module's purpose is to analyze a large amount of data on daily stock values and provide a summary for each one. After an examination of the data, the module creates new tables of data with corresponding formatting and headers. The tables will be filled in with computations that have been run on each grouping of stock tickers to create the summaries. The workbook and any worksheets within it should only update after the module finishes its execution.
 
 ## Detailed Description of Module
 Built to work with daily entries of various stocks and their associated values listed in one or more worksheets. Suboutine takes the input of a workbook and copies pre-organized data within the workbook (and its dimensions) to the temporary memory of local computer in the form of a variant array. The array data include the stock name, date of entry, the opening, high, low, and closing prices, and volume for each entry. The sample data given by the class has the workbook seperated into quarters and the stocks grouped by tickers which makes comparing groups of stocks easier. 
@@ -39,7 +45,7 @@ Built to work with daily entries of various stocks and their associated values l
 Looping within the new array, it only pauses at new stock tickers to compute the statistics of the prior range of stock tickers. The module will summarize the data for each stock ticker group and working one quarter at a time until the output is completed. The computations are stored in two new 2D arrays on computer by grouping of stock ticker. After new arrays are built, data is printed back to each worksheet with macro-based conditional formatting. Finally, the module permits the Microsoft Excel UI to resume updates before subroutine end.
 
 > [!NOTE]
-> [Current subroutine](/2oStockRoutine.bas) is now built using arrays to handle large quantities of data with rapid efficiency! [Previous subroutine](/1oStockRoutine.bas) ran by continuously accessing Microsoft Excel Ranges in the workbook and storing all temporary data within the sheet, however it computed at only 20% of the speed of current mode.
+> [Current subroutine](/2oStockRoutine.bas) is now built using arrays to handle large quantities of data with rapid efficiency! [Previous subroutine](/1oStockRoutine.bas) ran by continuously accessing Microsoft Excel Ranges in the workbook and storing all temporary data within the sheet, however it executed at only 20% of the speed of current mode.
 
 ## Current Limitations
 - [ ] Runs only with Microsoft Excel Workbooks.
@@ -48,10 +54,17 @@ Looping within the new array, it only pauses at new stock tickers to compute the
 - [ ] Input format must be: {Rows} x {Columns} --> {Ticker, date, open, high, low close, volume} x {Daily stock entries}
 - [ ] Input data is NOT verified/formatted/cleansed by module - adding said functionality has not been addressed.
 
+
 # VBA-challenge Citations
-For writing [2oStockRoutine.bas](/2oStockRoutine.bas) source code and its supporting README.md documentation multiple sources were used acrossed the web including [ChatGPT](#chatgpt-suggested-optimization), [Microsoft Learn](#microsoft-learn-vba-reference-guide), and [GitHub Docs](#readme-md-citations).
+For writing [2oStockRoutine.bas](/2oStockRoutine.bas) source code and its supporting README.md documentation multiple sources were used acrossed the web including:
+- [ChatGPT 1st Access](#chatgpt-access-1)
+- [ChatGPT 2nd Access](#chatgpt-access-2)
+- [Microsoft Learn](#microsoft-learn-guide)
+- [GitHub Docs](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+- [And this university website](#readme-help-citations)
 
 ## Source Code Citations
+<a name="chatgpt-access-1"></a>
 1. ChatGPT Optimization Suggestion Using Application Object Properties [^1]
    - Desciption: ChatGPT's algorithm suggested use of setting Application.Property = Value temporarily turns off Excel Worksheet properties that run during macro use until subroutine is done modifying data to improve latency.
    - Author: OpenAI
@@ -59,7 +72,7 @@ For writing [2oStockRoutine.bas](/2oStockRoutine.bas) source code and its suppor
    - Code Version: ChatGPT-4o
    - Availability: https://www.chatgpt.com
 [^1]: [ChatGPT-4o by OpenAI (2024)](https://www.chatgpt.com) used for optimization help:
-  Suggested modifying module [1oStockRoutine.bas](/1oStockRoutine.bas) setting Application.<Property> values
+  Suggested modifying module [1oStockRoutine.bas](/1oStockRoutine.bas) by setting Application.<Property> values
 ```
 Application.ScreenUpdating = False
 Application.Calculation = xlCalculationManual
@@ -71,6 +84,7 @@ Application.ScreenUpdating = True
 Application.Calculation = xlCalculationAutomatic
 Application.EnableEvents = True
 ```
+<a name="chatgpt-access-2"></a>
 2. ChatGPT Optimization Suggestion Using Variant Arrays [^2]
    - Description: ChatGPT suggested use of RAM (variant type array method) for storing, accessing, computing, comparing, and printing data. Implemented for its speed.
    - Author: OpenAI
@@ -78,7 +92,7 @@ Application.EnableEvents = True
    - Code Version: ChatGPT-4o
    - Availability: https://www.chatgpt.com
 [^2]: [ChatGPT-4o by OpenAI (2024)](https://www.chatgpt.com) used for optimization help:
-  Suggested modifying module [1oStockRoutine.bas](/1oStockRoutine.bas) to utilize arrays
+  Suggested modifying module [1oStockRoutine.bas](/1oStockRoutine.bas) to utilize arrays for faster processing
 ```
 Dim stockInput As Variant   'Array will hold all original data (aka Input)
 'Has dimensions of: {# Columns} x {# Rows} or more precisely...
@@ -92,6 +106,7 @@ Dim stockStats(1 To 3, 1 To 2) As Variant   'Array will hold largest values with
 'Has dimensions of: {# Columns} x {# Rows} or more precisely...
 '{Ticker, value} x {Greatest % increase, greatest % decrease, greatest volume}
 ```
+<a name="microsoft-learn-guide"></a>
 3. Microsoft Learn VBA Reference Guide [^3]
    - Description: Information on UBound(), With, ReDim declaration, variant data type, and conditional formatting
    - Author: Microsoft Learn/@o365devx/@AlexJerabek/@kbrandl/@OfficeGSX/@Saisang
@@ -126,12 +141,13 @@ With conditionRange   'Using "With" for ease of access
 End With
 ```
 
-## README.md Citations
-1. https://lib.pstcc.edu/csplagiarism/citation
-2. https://integrity.mit.edu/handbook/writing-code
-3. https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+## README Help Citations
+1. Written by Gries, D., L. Lee, S. Marschner, and W. White (over the years), published in 2014, the page "Academic Integrity, CS 1110..." was published online with information on how to list citations within source code.
+2. Published by GitHub for assistance using their markdown language in a README.md file! Includes information on hard/soft links, anchors, code embedding, picture sourcing and more!
+[^1]: Gries, D., et al. "Academic Integrity, CS 1110: Introduction to Computing Using Python: Fall 2014." Pellissippi Community College State Libraries, Sept. 2014, lib.pstcc.edu/csplagiarism/citation. Accessed 29 Nov. 2024.
+[^2]: GitHub, "Basic writing and formatting syntax" GitHub Docs, 2024, https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax. Accessed 29 Nov. 2024
 
 ## List of Subroutine SoftLinks
 [Link to Subroutine 2o](/2oStockRoutine.bas)
-[Link to Subroutine 2o With Timer](/2oWithTimer.bas)
+
 [Link to Subroutine 1o](/1oStockRoutine.bas)
