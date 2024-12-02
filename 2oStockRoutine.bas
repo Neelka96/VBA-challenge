@@ -1,9 +1,9 @@
 Attribute VB_Name = "Module1"
 'Version: 2.0
-'    ---------------------------------
-' /   Written by: Neel Agarwal @Neelka96    \
-'/  Last Updated: (mm.dd.yyyy) 12.2.2024  \
-'--------------------------------------
+'   ------------------------------------
+' /  Written by: Neel Agarwal @Neelka96  \
+'/ Last Updated: (mm.dd.yyyy) 12.2.2024   \
+'------------------------------------------
 'MODULE PURPOSE:
 '      Module 's purpose is to analyze a large amount of data held on multiple pages of a workbook. The data consists
 '      of daily stock values and the objective is to provide a summary for each one on each sheet, along with a smaller
